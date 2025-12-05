@@ -223,7 +223,7 @@ def inference_app(image, background_enhance, face_upsample, upscale, codeformer_
         img = cv2.resize(img, (512, 512), interpolation=cv2.INTER_LINEAR)
         face_helper.is_gray = is_gray(img, threshold=5)
         if face_helper.is_gray:
-            print("\tgrayscale input: True")
+            print("\tentrada en escala de grises: Verdadero")
         face_helper.cropped_faces = [img]
     else:
         with THREAD_LOCK_FACE_HELPER_PROCERSSING:
@@ -258,7 +258,7 @@ def inference_app(image, background_enhance, face_upsample, upscale, codeformer_
                 restored_face = tensor2img(output, rgb2bgr=True, min_max=(-1, 1))
             del output
         except RuntimeError as error:
-            print(f"Failed inference for CodeFormer: {error}")
+            print(f"Error en la inferencia de CodeFormer: {error}")
             restored_face = tensor2img(cropped_face_t, rgb2bgr=True, min_max=(-1, 1))
         release_codeformer(codeformer_net)
 

@@ -8,7 +8,7 @@ def get_image_frame(filename: str):
         frame = cv2.imread(filename)
         return frame
     except:
-        print(f"Exception reading {filename}")
+        print(f"Error al leer {filename}")
     return None
 
 

@@ -155,7 +155,7 @@ class DMDNETPlugin(ChainImgPlugin):
                 try:
                     GenericResult, SpecificResult = oDMDNet(lq = lq.to(device), loc = LQLocs.unsqueeze(0), sp_256 = SpMem256Para, sp_128 = SpMem128Para, sp_64 = SpMem64Para)
                 except Exception as e:
-                    print(f'Error {e} there may be something wrong with the detected component locations.')
+                    print(f'Error {e} puede haber algo mal con las ubicaciones de componentes detectadas.')
                     return clip
         save_generic = GenericResult * 0.5 + 0.5
         save_generic = save_generic.squeeze(0).permute(1, 2, 0).flip(2) # RGB->BGR

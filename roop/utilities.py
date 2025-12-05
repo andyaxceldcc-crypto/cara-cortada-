@@ -181,7 +181,7 @@ def conditional_download(download_directory_path: str, urls: List[str]) -> None:
         if not os.path.exists(download_file_path):
             request = urllib.request.urlopen(url) # type: ignore[attr-defined]
             total = int(request.headers.get('Content-Length', 0))
-            with tqdm(total=total, desc=f'Downloading {url}', unit='B', unit_scale=True, unit_divisor=1024) as progress:
+            with tqdm(total=total, desc=f'Descargando {url}', unit='B', unit_scale=True, unit_divisor=1024) as progress:
                 urllib.request.urlretrieve(url, download_file_path, reporthook=lambda count, block_size, total_size: progress.update(block_size)) # type: ignore[attr-defined]
 
 
@@ -225,7 +225,7 @@ def open_with_default_app(filename):
         subprocess.call('xdg-open', filename)
 
 def prepare_for_batch(target_files):
-    print("Preparing temp files")
+    print("Preparando archivos temporales")
     tempfolder = os.path.join(tempfile.gettempdir(), "rooptmp")
     if os.path.exists(tempfolder):
         shutil.rmtree(tempfolder)
