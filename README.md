@@ -1,114 +1,183 @@
-# roop-unleashed
+# 🎭 Roop-Unleashed en Español
 
-[Changelog](#changelog) • [Installation](#installation) • [Usage](#usage) • [Example](#example) • [FAQ](#faq)
+**¡La versión completamente traducida al español de roop-unleashed!**
 
-
-Uncensored Deepfakes for images and videos without training and an easy-to-use GUI.
-
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Español](https://img.shields.io/badge/Idioma-Español-red.svg)](README_ES.md)
 
 ![Screen](docs/screenshot.png)
 
+## 🚀 Instalación Rápida
 
-### Features
+### Opción 1: Instalación Automática (Recomendada)
 
-- Platform-independant Browser GUI
-- Selection of multiple input/output faces in one go
-- Many different swapping modes, first detected, face selections, by gender
-- Batch processing of images/videos
-- Masking of face occluders using text prompts
-- Optional Face Restoration using different enhancers
-- Preview swapping from different video frames
-- Live Fake Cam using your webcam
-- Extras Tab for cutting videos etc.
-- Settings - storing configuration for next session
-- Theme Support
+**Windows:**
+```cmd
+instalar.bat
+```
 
-and lots more...
+**Linux/Mac:**
+```bash
+chmod +x instalar.sh
+./instalar.sh
+```
 
+**Universal:**
+```bash
+python instalar.py
+```
 
-## Disclaimer
+### Opción 2: Instalación Manual
+```bash
+git clone https://github.com/andyaxceldcc-crypto/cara-cortada-.git
+cd cara-cortada-
+python -m venv roop-env
+# Windows: roop-env\Scripts\activate
+# Linux/Mac: source roop-env/bin/activate
+pip install -r requirements.txt
+```
 
-This project is for technical and academic use only.
-Users of this software are expected to use this software responsibly while abiding the local law. If a face of a real person is being used, users are suggested to get consent from the concerned person and clearly mention that it is a deepfake when posting content online. Developers of this software will not be responsible for actions of end-users.
-**Please do not apply it to illegal and unethical scenarios.**
+## 🎮 Ejecución
 
-In the event of violation of the legal and ethical requirements of the user's country or region, this code repository is exempt from liability
+```bash
+python run.py
+```
 
-### Installation
+La aplicación se abrirá automáticamente en tu navegador en `http://localhost:7860`
 
-> For Windows, you need to download and install [Visual Studio](https://visualstudio.microsoft.com/de/downloads/) (in theory build-tools might work too but in my experience so far they don't). During the install, make sure to include the C++ package.
+## ✨ Características
 
-Besides that, just use the 1-click installer in releases. This will download and install everything
-in a handy conda environment. This not only installs the application but also runs it, once installed.
+- 🔄 **Intercambio de Caras**: Entre imágenes y videos
+- 📹 **Cámara en Vivo**: Intercambio en tiempo real
+- 🎨 **Mejoramiento de IA**: GFPGAN, Real-ESRGAN, CodeFormer
+- 🛠️ **Herramientas Extra**: Cortar videos, unir, extraer frames
+- ⚙️ **Configuración Avanzada**: Múltiples opciones personalizables
+- 🌐 **100% en Español**: Interfaz completamente traducida
+- 🎯 **Selección Múltiple**: Múltiples caras de entrada/salida
+- 🔍 **Modos de Intercambio**: Primera detectada, selección manual, por género
+- 📦 **Procesamiento por Lotes**: Imágenes y videos múltiples
+- 🎭 **Enmascaramiento**: Oclusores faciales usando prompts de texto
+- 🔄 **Restauración Facial**: Diferentes mejoradores disponibles
+- 👁️ **Vista Previa**: Intercambio desde diferentes frames del video
 
-For other OS or if you know what you're doing:
+## 📋 Traducciones Realizadas
 
-- `git clone https://github.com/C0untFloyd/roop-unleashed`
-- preferably create a venv or conda environment
-- `cd roop-unleashed`
-- `pip install -r requirements.txt`
+- ✅ **Interfaz de Usuario**: Todos los menús, botones y etiquetas
+- ✅ **Mensajes**: Errores, notificaciones y ayuda
+- ✅ **Documentación**: Guías completas en español
+- ✅ **Instaladores**: Scripts automáticos en español
+- ✅ **Línea de Comandos**: Argumentos y ayuda traducidos
 
-Depending on your available GPU there are additional packages you need to install. Here are the instructions from the original roop page:
+## 📁 Archivos Importantes
 
-[Using GPU Acceleration](https://github.com/s0md3v/roop/wiki/2.-Acceleration)
+- **`README_ES.md`** - Documentación completa en español
+- **`INSTRUCCIONES_ES.md`** - Guía detallada de uso
+- **`CAMBIOS_REALIZADOS.md`** - Resumen de todas las modificaciones
+- **`instalar.py`** - Instalador universal automático
+- **`instalar.bat`** - Instalador para Windows
+- **`instalar.sh`** - Instalador para Linux/Mac
 
-The used GPU Provider is configured in the settings tab, no need to use cmdline arguments any more. Default is CUDA (for NVIDIA). If you change it, please restart roop-unleashed completely to allow for model reloading.
+## 🎯 Casos de Uso
 
-For Video face-swapping you also need to have ffmpeg properly installed (having it in your PATH Env). The windows installer tries to do this automatically.  
+### Entretenimiento
+- Crear memes divertidos
+- Efectos especiales caseros
+- Contenido para redes sociales
 
+### Educativo
+- Demostraciones de deepfakes
+- Investigación académica
+- Concienciación sobre IA
 
+### Profesional
+- Efectos visuales
+- Doblaje visual
+- Prototipos de personajes
 
-### Usage
+## ⚠️ Uso Ético y Responsable
 
-- Windows: run the `windows_run.bat` from the Installer.
-- Linux: `python run.py`
+### ✅ Permitido
+- Obtener consentimiento de las personas
+- Etiquetar contenido como deepfake
+- Uso educativo y de investigación
+- Cumplir con las leyes locales
 
-<a target="_blank" href="https://colab.research.google.com/github/C0untFloyd/roop-unleashed/blob/main/roop-unleashed.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
-  
+### ❌ Prohibido
+- Crear contenido malicioso
+- Desinformación o noticias falsas
+- Uso sin consentimiento
+- Violar leyes de privacidad
 
-Additional commandline arguments are currently unsupported and settings should be done via the UI.
+## 🔧 Requisitos del Sistema
 
-> Note: When you run this program for the first time, it will download some models roughly ~2Gb in size.
+### Mínimos
+- **Python**: 3.8 o superior
+- **RAM**: 8GB
+- **GPU**: Opcional (NVIDIA recomendada)
+- **Espacio**: 5GB libres
 
+### Recomendados
+- **Python**: 3.10+
+- **RAM**: 16GB+
+- **GPU**: NVIDIA RTX 3060+
+- **Espacio**: 10GB+ libres
 
-### Example
+## 🐛 Solución de Problemas
 
-*Coming soon*
+### Problemas Comunes
 
+**Error de memoria:**
+```bash
+python run.py --max-memory 4
+```
 
+**GPU no detectada:**
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+```
 
-### Changelog
+**Puerto ocupado:**
+```bash
+python run.py --server-port 7861
+```
 
-**11.8.2023** v2.7.0
+## 📞 Soporte
 
-Initial Gradio Version - old TkInter Version now deprecated
+- **Issues**: [Reportar problemas](https://github.com/andyaxceldcc-crypto/cara-cortada-/issues)
+- **Documentación**: [README_ES.md](README_ES.md)
+- **Guía de uso**: [INSTRUCCIONES_ES.md](INSTRUCCIONES_ES.md)
 
-- Re-added unified padding to face enhancers
-- Fixed DMDNet for all resolutions
-- Selecting target face now automatically switches swapping mode to selected
-- GPU providers are correctly set using the GUI (needs restart currently)
-- Local output folder can be opened from page
-- Unfinished extras functions disabled for now
-- Installer checks out specific commit, allowing to go back to first install
-- Updated readme for new gradio version
-- Updated Colab
+## 🤝 Contribuir
 
+¡Las contribuciones son bienvenidas!
 
-# Acknowledgements
+1. Fork el repositorio
+2. Crea una rama: `git checkout -b feature/nueva-caracteristica`
+3. Commit: `git commit -m 'Añadir nueva característica'`
+4. Push: `git push origin feature/nueva-caracteristica`
+5. Abre un Pull Request
 
-Lots of ideas, code or pre-trained models used from the following projects:
+## 📝 Licencia
 
-https://github.com/deepinsight/insightface
-https://github.com/s0md3v/roop
-https://github.com/AUTOMATIC1111/stable-diffusion-webui
-https://github.com/Hillobar/Rope
-https://github.com/janvarev/chain-img-processor
-https://github.com/TencentARC/GFPGAN   
-https://github.com/kadirnar/codeformer-pip
-https://github.com/csxmli2016/DMDNet
+Este proyecto está bajo la licencia MIT. Ver [LICENSE](LICENSE) para más detalles.
 
+## 🙏 Créditos
 
-Thanks to all developers!
+- **Proyecto Original**: [roop](https://github.com/s0md3v/roop)
+- **Versión Unleashed**: [roop-unleashed](https://github.com/zullum/roop-unleashed)
+- **Traducción Española**: Esta versión modificada
 
+---
+
+## 🎉 ¡Disfruta usando roop-unleashed en español!
+
+**Recuerda siempre usar esta herramienta de manera ética y responsable** 🎭✨
+
+### Enlaces Útiles
+- [📖 Documentación Completa](README_ES.md)
+- [🛠️ Guía de Instalación](INSTRUCCIONES_ES.md)
+- [📋 Lista de Cambios](CAMBIOS_REALIZADOS.md)
+- [🐛 Reportar Problemas](https://github.com/andyaxceldcc-crypto/cara-cortada-/issues)
+
+**¡Gracias por usar roop-unleashed en español!** 🇪🇸
